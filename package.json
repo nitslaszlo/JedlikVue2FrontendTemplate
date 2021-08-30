@@ -54,7 +54,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {},
+    "rules": {
+      "quotes": ["error", "double"]
+    },
     "overrides": [
       {
         "files": [
