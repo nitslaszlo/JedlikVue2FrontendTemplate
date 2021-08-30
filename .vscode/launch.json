@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "pwa-msedge",
+          "request": "launch",
+          "name": "Debug in Edge",
+          "url": "http://localhost:8080",
+          "webRoot": "${workspaceFolder}/src",
+          "sourceMaps": true,
+          "sourceMapPathOverrides": {
+              "webpack:///./src/*": "${webRoot}/*"
+          }
+      },
+      {
+          "name": "Debug Jest Tests",
+          "type": "node",
+          "request": "launch",
+          "cwd": "${workspaceFolder}",
+          "args": ["--inspect-brk", "${workspaceRoot}/node_modules/.bin/jest", "--runInBand"],
+          "skipFiles": ["${workspaceRoot}/node_modules/**", "<node_internals>/**"],
+          "console": "integratedTerminal",
+          "internalConsoleOptions": "neverOpen"
+      }
+  ]
+}
