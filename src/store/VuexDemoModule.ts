@@ -1,7 +1,7 @@
 import { Action, Module, Mutation, VuexModule } from "vuex-module-decorators";
 
 @Module
-export default class VuexDemoStore extends VuexModule {
+export default class VuexDemoModule extends VuexModule {
   // State:
   private totalTvCount = 10;
 

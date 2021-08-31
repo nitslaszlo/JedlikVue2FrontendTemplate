@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <v-app>
-      <v-app-bar app color="primary" dark class="hidden-xs-only">
+      <v-app-bar
+        app
+        color="primary"
+        dark
+        class="hidden-sm-and-down"
+        height="60px"
+      >
         <div class="d-flex align-center">
           <v-img
             src="@/assets/Jedlik.png"
@@ -15,8 +21,9 @@
           v-for="item in menuItems"
           :key="item.path"
           color="transparent"
-          elevation="0"
+          elevation="4"
           :to="item.path"
+          class="mr-2"
           >{{ item.name }}</v-btn
         >
 
@@ -32,7 +39,14 @@
         </v-btn>
       </v-app-bar>
 
-      <v-app-bar app color="primary" dark absolute class="hidden-sm-and-up">
+      <v-app-bar
+        app
+        color="primary"
+        dark
+        absolute
+        class="hidden-md-and-up"
+        height="60px"
+      >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       </v-app-bar>
 
@@ -66,10 +80,7 @@
       </v-navigation-drawer>
 
       <v-main>
-        <v-container fluid>
-          <!-- If using vue-router -->
-          <router-view></router-view>
-        </v-container>
+        <router-view></router-view>
       </v-main>
 
       <v-footer fixed padless>
@@ -117,12 +128,12 @@ export default class App extends Vue {
         path: "/vuex",
       },
       {
-        name: "ABOUT",
-        path: "/about",
+        name: "LOREM",
+        path: "/lorem",
       },
       {
-        name: "ABOUT2",
-        path: "/about2",
+        name: "ABOUT",
+        path: "/about",
       },
     ];
   }
