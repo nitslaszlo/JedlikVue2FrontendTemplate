@@ -59,9 +59,9 @@
             :to="item.path"
           >
             <v-list-item-content>
-              <v-list-item-title class="text-uppercase"
-                >{{ item.name }}</v-list-item-title
-              >
+              <v-list-item-title class="text-uppercase">{{
+                item.name
+              }}</v-list-item-title>
             </v-list-item-content>
             <!-- <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
