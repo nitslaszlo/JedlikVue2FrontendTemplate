@@ -23,14 +23,14 @@
           color="transparent"
           elevation="4"
           :to="item.path"
-          class="mr-2"
+          class="mr-2 text-capitalize"
           >{{ item.name }}</v-btn
         >
 
         <v-spacer></v-spacer>
 
         <v-btn
-          href="https://github.com/nitslaszlo/JedlikComplexVuetify"
+          href="https://github.com/nitslaszlo/JedlikVue2FrontendTemplate"
           target="_blank"
           text
         >
@@ -59,14 +59,16 @@
             :to="item.path"
           >
             <v-list-item-content>
-              <v-list-item-title>{{ item.name }}</v-list-item-title>
+              <v-list-item-title class="text-uppercase"
+                >{{ item.name }}</v-list-item-title
+              >
             </v-list-item-content>
             <!-- <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon> -->
           </v-list-item>
           <v-list-item
-            href="https://github.com/nitslaszlo/JedlikComplexVuetify"
+            href="https://github.com/nitslaszlo/JedlikVue2FrontendTemplate"
             link
           >
             <v-list-item-content>
@@ -112,27 +114,27 @@ export default class App extends Vue {
     super();
     this.menuItems = [
       {
-        name: "HOME",
+        name: "Home",
         path: "/",
       },
       {
-        name: "DEMO",
+        name: "Vue.js",
         path: "/demo",
       },
       {
-        name: "DEMO2",
+        name: "Vuetify",
         path: "/demo2",
       },
       {
-        name: "VUEX",
+        name: "Vuex",
         path: "/vuex",
       },
       {
-        name: "LOREM",
+        name: "Lorem",
         path: "/lorem",
       },
       {
-        name: "ABOUT",
+        name: "About",
         path: "/about",
       },
     ];
